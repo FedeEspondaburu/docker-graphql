@@ -30,10 +30,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build --tag fesponda/docker-graphql-repo:0.0.2 .
+        docker build --tag fesponda/docker-graphql-repo:latest .
 
     - name: Push Docker Image
       run: |
         docker push fesponda/docker-graphql-repo:0.0.2
+        docker push fesponda/docker-graphql-repo:latest
         
 #    - name: Build the Docker image
 #     run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
